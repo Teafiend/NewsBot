@@ -15,5 +15,5 @@ def get_titles_and_links(query):
 	parsed_data = parse_query(url)
 	return_list = []
 	for entry in parsed_data['entries']:
-		return_list.append((entry['title'], entry['link']))
+		return_list.append((entry['title'], entry['link'].split('url=')[-1]))
 	return return_list
